@@ -22,7 +22,8 @@ st.text('積算気温から、ひとめぼれの収穫適期を予測します�
 st.text('実際の収穫のタイミングは、籾の黄化の程度を見て、判断してください。')
 if st.button('アプリの説明～まずはここを読んでから！'):
     st.switch_page('pages/readme.py')
-
+st.subheader('エラー情報')
+st.text('R7.7.29 出穂日に一昨日の日付を入れるとエラーが出ます。現在、原因解明中です。')
 with st.form(key='input_form'):
     st.header('入力フォーム')
     a_area = st.selectbox('アメダス地点の選択', amedas_l, index=9)
